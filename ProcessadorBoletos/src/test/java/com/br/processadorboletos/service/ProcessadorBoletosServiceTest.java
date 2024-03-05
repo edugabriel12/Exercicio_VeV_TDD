@@ -2,6 +2,8 @@ package com.br.processadorboletos.service;
 
 import com.br.processadorboletos.domain.Boleto;
 import com.br.processadorboletos.domain.Fatura;
+import com.br.processadorboletos.domain.Pagamento;
+import com.br.processadorboletos.domain.TipoPagamento;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
