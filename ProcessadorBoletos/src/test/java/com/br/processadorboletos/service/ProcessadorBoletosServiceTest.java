@@ -1,5 +1,7 @@
-package com.br.processadorboletos.services;
+package com.br.processadorboletos.service;
 
+import com.br.processadorboletos.domain.Boleto;
+import com.br.processadorboletos.domain.Fatura;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -16,13 +18,17 @@ public class ProcessadorBoletosServiceTest {
         Boleto boleto2 = new Boleto("2", new Date(), 400);
         Boleto boleto3 = new Boleto("3", new Date(), 400);
 
-        List<Object> boletos = Arrays.asList(boleto1, boleto2, boleto3);
+        List<Boleto> boletos = Arrays.asList(boleto1, boleto2, boleto3);
 
-        Fatura fatura = new Fatura(new Date(), 1000, "Eduardo Gabriel", false);
+        Fatura fatura = new Fatura(
+                new Date(),
+                1000,
+                "Eduardo Gabriel",
+                false);
 
         ProcessadorBoletosService service = new ProcessadorBoletosService();
 
-        List<Pagamento> pagamentos = service.processaListaBoletos(boletos, fatura);
+        service.processaListaBoletos(boletos, fatura);
 
         Assertions.assertTrue(fatura.getFaturaEstaPaga());
     }
