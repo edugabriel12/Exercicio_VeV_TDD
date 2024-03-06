@@ -54,4 +54,20 @@ public class GerenciadorTarefasTest {
 
     }
 
+    @Test
+    public void deveRetornarOrdenado(){
+        Tarefa tarefa3 = new Tarefa("Tarefa 3", "Descrição da tarefa 3",  new Date(2024, 3, 4), Prioridade.BAIXA);
+        Tarefa tarefa1 = new Tarefa("Tarefa 1", "Descrição da tarefa 1", new Date(2024, 3, 5), Prioridade.ALTA);
+        Tarefa tarefa2 = new Tarefa("Tarefa 2", "Descrição da tarefa 2",  new Date(2024, 3, 6), Prioridade.MEDIA);
+
+        List<Tarefa> tarefas = Arrays.asList(tarefa3, tarefa2, tarefa1);
+        GerenciadorTarefasService tarefaService = new GerenciadorTarefasService(tarefas);
+        List<Tarefa> listaOrdenada = tarefaService.getListaDeTarefas();
+        assertEquals(tarefa1, listaOrdenada.get(0));
+        assertEquals(tarefa2, listaOrdenada.get(1));
+        assertEquals(tarefa3, listaOrdenada.get(2));
+
+
+    }
+
 }
