@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import  com.br.gerenciadordetarefas.domain.Prioridade;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Arrays;
 
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class GerenciadorTarefasTest {
 
@@ -37,7 +37,21 @@ public class GerenciadorTarefasTest {
         assertEquals(novaPrioridade, tarefa1.getPrioridade());
         assertEquals(novaData, tarefa1.getData());
 
+    }
 
+    @Test
+    public void deveExcluirTarefa(){
+        Tarefa tarefa1 = new Tarefa("OS1", "fazer alteracoes na tela", new Date(), Prioridade.ALTA );
+        Tarefa tarefa2 = new Tarefa("OS2", "fazer alteracoes no back", new Date(), Prioridade.MEDIA );
+        Tarefa tarefa3 = new Tarefa("OS3", "fazer alteracoes no BD", new Date(), Prioridade.BAIXA );
+
+        List<Tarefa> tarefas = Arrays.asList(tarefa1, tarefa2, tarefa3);
+
+        TarefaService tarefaService = new TarefaService(tarefas);
+        tarefaService.excluirTarefa(tarefa1);
+
+        assertFalse(tarefaService.getListaDeTarefas().contains(tarefa1));
 
     }
+
 }
