@@ -27,15 +27,15 @@ public class GerenciadorTarefasTest {
         Prioridade novaPrioridade = Prioridade.BAIXA;
         Date novaData = new Date();
 
-        tarefa.setTitulo(novoTitulo);
-        tarefa.setDescricao(novaDescricao);
-        tarefa.setPrioridade(novaPrioridade);
-        tarefa.setData(novaData);
+        tarefa1.setTitulo(novoTitulo);
+        tarefa1.setDescricao(novaDescricao);
+        tarefa1.setPrioridade(novaPrioridade);
+        tarefa1.setData(novaData);
 
-        assertEquals(novoTitulo, tarefa.getTitulo());
-        assertEquals(novaDescricao, tarefa.getDescricao());
-        assertEquals(novaPrioridade, tarefa.getPrioridade());
-        assertEquals(novaData, tarefa.getData());
+        assertEquals(novoTitulo, tarefa1.getTitulo());
+        assertEquals(novaDescricao, tarefa1.getDescricao());
+        assertEquals(novaPrioridade, tarefa1.getPrioridade());
+        assertEquals(novaData, tarefa1.getData());
 
 
 
