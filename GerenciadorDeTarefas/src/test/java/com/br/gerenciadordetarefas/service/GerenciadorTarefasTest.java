@@ -47,7 +47,7 @@ public class GerenciadorTarefasTest {
 
         List<Tarefa> tarefas = Arrays.asList(tarefa1, tarefa2, tarefa3);
 
-        TarefaService tarefaService = new TarefaService(tarefas);
+        GerenciadorTarefasService tarefaService = new GerenciadorTarefasService(tarefas);
         tarefaService.excluirTarefa(tarefa1);
 
         assertFalse(tarefaService.getListaDeTarefas().contains(tarefa1));
