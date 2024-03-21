@@ -47,10 +47,20 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "ruby.rails.projectView.checked": "true",
+    "spring.configuration.checksum": "f1294546a654a0b9cea3d4c1843e90fd",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$/ProcessadorBoletos" />
+        <option value="$PROJECT_DIR$" />
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="ProcessadorBoletosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="ProcessadorBoletos" />
@@ -69,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709598975192</updated>
       <workItem from="1709598977316" duration="1748000" />
+      <workItem from="1709646553013" duration="43000" />
     </task>
     <servers />
   </component>

@@ -24,7 +24,7 @@ public class ProcessadorBoletosService {
             somaPagamentos += pagamento.getValorPago();
         }
 
-        if (somaPagamentos > fatura.getValorTotal()) {
+        if (somaPagamentos >= fatura.getValorTotal()) {
             fatura.setFaturaEstaPaga(true);
         }
 
